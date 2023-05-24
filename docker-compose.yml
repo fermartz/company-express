@@ -1,0 +1,9 @@
+version: "3"
+services:
+  node:
+    image: node:18.3.0
+    entrypoint: /app
+    command: git clone https://gitlab.origyn.ch/origyn/engineering/proprietary/origyn-company-service.git
+    container_name: express-company-service
+    ports:
+      - "3000:3000"
