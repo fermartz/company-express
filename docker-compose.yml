@@ -3,7 +3,13 @@ services:
   node:
     image: node:18.3.0
     entrypoint: /app
-    command: git clone https://github.com/fermartz/company-express.git && npm install && node index.js
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        echo "git clone https://github.com/fermartz/company-express.git"
+        echo "npm install"
+        echo "node index.js"
     container_name: express-company-service
     ports:
       - "3000:3000"
