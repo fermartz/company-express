@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 services:
   node:
     image: alpine    
@@ -7,7 +7,6 @@ services:
       - -c
       - |
         echo "mkdir /app"
-    entrypoint: /app
     container_name: express-company-service
     ports:
       - "3000:3000"
